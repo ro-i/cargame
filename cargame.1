@@ -1,0 +1,71 @@
+.TH CARGAME 1 "2020-03-28" "cargame manual page" "cargame manual page"
+
+
+.SH NAME
+cargame - a simple curses car game
+
+
+.SH SYNOPSIS
+.B cargame
+[\fIOPTION\fR]... \fILEVELFILE\fR
+.br
+.B cargame
+\fIOPTION\fR
+
+
+.SH OPTIONS
+.TP
+.B -b
+toggle use of game borders
+.TP
+.B -c
+print car characters
+.TP
+.B -h
+show this help
+.TP
+.B -s
+show maximum level size
+.TP
+.B -v
+show version information
+
+
+.SH USAGE
+You need a level file, which can be loaded as game field. Then you need to
+navigate with your car to the parking place without crashing something.
+The default representation of the car is an arrow which points to the current
+driving direction of the car.
+If you selected the game borders, you may not crash them either. If not,
+you may leave the screen on the one side and you will enter the screen on the
+other (like the old snake games :-) ).
+
+.SH Keys
+.TP
+.B Up, a
+accelerate
+.TP
+.B Down, b
+break
+.TP
+.B Right
+turn right
+.TP
+.B Left
+turn left
+.TP
+.B q
+quit
+
+.SH AUTHORS
+Written by Robert Imschweiler
+
+
+.SH COPYRIGHT
+Copyright (C) 2019-2020 Robert Imschweiler
+.br
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
+.br
+This is free software; you are free to change and redistribute it.
+.br
+There is NO WARRANTY, to the extent permitted by law.
