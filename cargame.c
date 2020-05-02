@@ -137,6 +137,7 @@ static void   mscl(const wchar_t *msg);
 static void   mscl_clear(void);
 static void   print_max_levelsize(void);
 static void   sig_hdl(int sig);
+static void   pre_setup(void);
 static void   setup(void);
 static void   timer_accelerate(void);
 static void   timer_end(void);
@@ -164,7 +165,7 @@ static void   version(void);
  */
 static Car     car;
 static Curses  curses;
-static Game    game = { .borders = default_borders };
+static Game    game;
 static Goal    goal;
 static Timer   timer;
 
@@ -914,6 +915,12 @@ sig_hdl(int sig)
 }
 
 void
+pre_setup(void)
+{
+	game.borders = default_borders;
+}
+
+void
 setup(void)
 {
 	static struct sigaction sig_act;
@@ -1059,6 +1066,8 @@ int
 main(int argc, char **argv)
 {
 	int opt;
+
+	pre_setup();
 
 	while ((opt = getopt(argc, argv, "bchsv")) != -1) {
 		switch (opt) {
