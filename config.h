@@ -57,7 +57,7 @@ typedef struct {
  * chars          character definitions
  * colors         color definitions
  */
-const Characters chars = {
+static const Characters chars = {
 	.car_left = L'←',
 	.car_right = L'→',
 	.car_up = L'↑',
@@ -67,7 +67,7 @@ const Characters chars = {
 };
 
 /* set to "-1" for terminal default value */
-const Colors colors = {
+static const Colors colors = {
 	.car_bg = -1,
 	.car_fg = COLOR_RED,
 	.goal_bg = -1,
@@ -82,8 +82,8 @@ const Colors colors = {
  *
  * Must be smaller than 1 sec (= 1000000000 nanoseconds)!
  */
-const long speed_step_width = 10000000;
-const long start_speed = 250000000;
+static const long speed_step_width = 10000000;
+static const long start_speed = 250000000;
 
 /*
  * Show borders around the game field?
@@ -92,4 +92,4 @@ const long start_speed = 250000000;
  *
  * May be toggled using "-b" option.
  */
-const bool default_borders = true;
+static const bool default_borders = true;
