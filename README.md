@@ -8,8 +8,10 @@ So really "work-in-progress" at the moment. ;-)
 
 Project Status
 --------------
-This software is under development, a work-in-progress. It is not yet stable
-or suitable for general use.
+I wrote this software some time ago in order to learn something new and 
+in order to use it and to play with it. However, I am no longer satisfied
+with the current state of the project. That's why it is now archived for the
+time being. :)
 
 Dependencies:
 -------------
